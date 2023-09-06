@@ -1,4 +1,3 @@
-from typing import Final
 from random import choice as random_choice
 
 player_dict = {
@@ -7,9 +6,9 @@ player_dict = {
 }
 
 class Solver():
-  HEIGHT: Final[int] = 6
-  WIDTH: Final[int] = 7
-  MAX_MOVES: Final[int] = HEIGHT * WIDTH
+  HEIGHT = 6
+  WIDTH = 7
+  MAX_MOVES = HEIGHT * WIDTH
 
   def __init__(self, board, protagonist, antagonist, max_depth, current_columns, win_conditions):
     self.board = board
