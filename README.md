@@ -1,1 +1,1 @@
-"# Connect4 Solver in Python" 
+# Connect4 Solver in Python
