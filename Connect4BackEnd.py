@@ -38,7 +38,7 @@ def get_ai_move():
 @app.route('/wake', methods=['GET'])
 def wake():
   print('Waking up')
-  return jsonify({ 'message' : 'Hello, I am awake now' })
+  return jsonify({ 'message' : 'Hello, I am awake now' }), 200
 
 if __name__ == '__main__':
    app.run(debug=True)
