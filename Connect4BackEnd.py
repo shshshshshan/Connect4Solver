@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 from Connect4 import Solver
 
 app = Flask(__name__);
@@ -37,6 +37,10 @@ def get_ai_move():
 def wake():
   print('Waking up')
   return jsonify({ 'message' : 'Hello, I am awake now' }), 200
+
+@app.route('/')
+def root():
+  return redirect('/wake')
 
 if __name__ == '__main__':
    app.run()
