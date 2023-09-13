@@ -1,9 +1,7 @@
 from flask import Flask, request, jsonify
 from Connect4 import Solver
-from flask_cors import CORS
 
 app = Flask(__name__);
-CORS(app)
 
 @app.route('/get_ai_move', methods=['POST'])
 def get_ai_move():
@@ -41,4 +39,4 @@ def wake():
   return jsonify({ 'message' : 'Hello, I am awake now' }), 200
 
 if __name__ == '__main__':
-   app.run(debug=True)
+   app.run()
